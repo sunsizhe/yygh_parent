@@ -41,7 +41,7 @@ public class JwtHelper {
 
         Jws<Claims> claimsJws = Jwts.parser().setSigningKey(tokenSignKey).parseClaimsJws(token);
         Claims claims = claimsJws.getBody();
-        return (String)claims.get("userNamee");
+        return (String)claims.get("userName");
     }
 
     public static void main(String[] args) {
